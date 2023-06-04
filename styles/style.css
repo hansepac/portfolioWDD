@@ -1,0 +1,23 @@
+/*
+https://www.10bestdesign.com/firms/ecommerce/?gad=1&gclid=CjwKCAjwyeujBhA5EiwA5WD7_UIq4ygN3cCVKFK2t8_s0r9Nm5ve75kMU5QwjICGyD4Mg30mb51-4BoCEC4QAvD_BwE 
+*/
+
+#hero {
+    background-position: 50% 0%;
+     background-size: cover; 
+     background-repeat: no-repeat; 
+     background-image: url("https://www.dotlogics.com/images/new-home-bann.jpg"); 
+     position: fixed; 
+     top: 0px; 
+     left: 0px; 
+     width: 500px; 
+     height: 980px; 
+     overflow: hidden; 
+     pointer-events: none; 
+     transform-style: preserve-3d; 
+     backface-visibility: hidden; 
+     will-change: transform, opacity; 
+     margin-top: -114px; 
+     transform: translate3d(0px, 162.93px, 0px);
+     /*   https://www.dotlogics.com/  */
+}
