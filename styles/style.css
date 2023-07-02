@@ -2,22 +2,354 @@
 https://www.10bestdesign.com/firms/ecommerce/?gad=1&gclid=CjwKCAjwyeujBhA5EiwA5WD7_UIq4ygN3cCVKFK2t8_s0r9Nm5ve75kMU5QwjICGyD4Mg30mb51-4BoCEC4QAvD_BwE 
 */
 
-#hero {
-    background-position: 50% 0%;
-     background-size: cover; 
-     background-repeat: no-repeat; 
-     background-image: url("https://www.dotlogics.com/images/new-home-bann.jpg"); 
-     position: fixed; 
-     top: 0px; 
-     left: 0px; 
-     width: 500px; 
-     height: 980px; 
-     overflow: hidden; 
-     pointer-events: none; 
-     transform-style: preserve-3d; 
-     backface-visibility: hidden; 
-     will-change: transform, opacity; 
-     margin-top: -114px; 
-     transform: translate3d(0px, 162.93px, 0px);
-     /*   https://www.dotlogics.com/  */
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Crimson+Text&family=Noto+Sans&family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #F72585   ;
+  --secondary-color: #7209B7 ;
+  --tertiary-color: #3A0CA3;
+  --accent1-color: #4361ee;
+  --accent2-color: #4CC9F0;
+
+  --heading-font: 'Rubik', 'Noto Sans', sans-serif;
+  --paragraph-font: 'Arvo', 'Crimson Text', serif;
+
+  --headline-color-on-white: #4361ee;
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: #9ae5fc;
+  --paragraph-color-on-color: white;
+  --background-color: #1b1d1e;
+  --main-gradient: linear-gradient(135deg, #F72585 20%,#7209B7 80%, #3A0CA3 99%);
+  --accent-gradient: linear-gradient(135deg, #4361EE, #4CC9F0);
+  --full-gradient: linear-gradient(135deg, #F72585 20%,#7209B7 65%, #4361EE 80%, #4CC9F0 99%);
+  --paragraph-background-color: #4361ee  ;
+  --nav-link-color: #9ae5fc;
+  --nav-background-color: linear-gradient(135deg, #F72585 20%,#7209B7 80%, #3A0CA3 99%);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: linear-gradient(135deg, #4361EE, #4CC9F0);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--background-color);
+    color: white;
+    margin: 0;
+    
+}
+h1, h2, h3, h4, h5{
+    font-family: var(--heading-font);
+}
+p {
+    font-family: var(--paragraph-font);
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 100px 40% auto auto auto;
+    align-items: center;
+    justify-items: center;
+    height: 100px;
+}
+nav a{
+    color: var(--accent1-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: var(--paragraph-font);
+    transition: all .3s;
+}
+nav a:hover {
+    color: var(--accent2-color);
+    scale: 1.1;
+}
+nav a img{ 
+    width: 50px;
+}
+nav a:nth-of-type(2) {grid-column: 3 / 4}
+nav a:nth-of-type(3) {grid-column: 4 / 5}
+nav a:nth-of-type(4) {grid-column: 5 / 6}
+
+#home-intro-grid {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    justify-items: center;
+    height: 90vh;
+}
+.home-big-logo {
+    width: 35vw;
+    
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+
+    &:hover {
+        transform: perspective(3000px) rotateY(5deg);
+    }
+    
+}
+
+.home-intro-title {
+    font-size: 3.5em;
+    background-image: var(--full-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+#home-intro-text {
+    justify-items: center;
+}
+
+.home-intro-p {
+    font-size: 1.5em;
+    width: 100%;
+    text-indent: 2em;
+}
+
+.click {
+    font-size: 2em;
+    text-align: center;
+    background-image: var(--full-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.arrow-link {
+    grid-column: 1 / 3;
+}
+.arrow-down {
+    width: 10vw;
+    background-image: var(--main-gradient);
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    color: transparent;
+    animation: arrow 4s ease-out infinite;
+    animation-fill-mode: both;
+}
+
+#home-card-grid {
+    display: grid;
+    grid-template: 60vh 15vh / 50% 50%;
+    justify-items: center;
+    height: 100vh;
+}
+
+#home-card-grid div img {
+    margin: auto;
+    height: 45vh;
+}
+
+#home-card-grid div {
+    margin-top: 10%;
+    width: 80%;
+    width: max-content;
+    height: max-content;
+
+    transform: scale(0.75) rotateY(-30deg) rotateX(45deg) translateZ(4.5rem);
+    transform-origin: 50% 100%;
+    transform-style: preserve-3d;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
+    transition: 0.6s ease transform;
+
+    &:hover {
+        transform: scale(1);
+    }
+
+    &::before, &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99%;
+        transition: all 0.6s ease;
+    }
+
+    &::before {
+        transform: translateZ(4rem);
+        height: 97.5%;
+    }
+
+    &::after {
+        transform: translateZ(-4rem);
+        height: 100%;
+        box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, .75);
+    }
+}
+
+#home-card-grid div:nth-of-type(1) {
+    &::before {
+        border: 5px solid var(--primary-color);
+    }
+    &::after {
+        background-color: var(--primary-color);
+    }
+}
+
+#home-card-grid div:nth-of-type(2) {
+    &::before {
+        border: 5px solid var(--accent2-color);
+    }
+    &::after {
+        background-color: var(--accent1-color);
+    }
+}
+
+.card-img {
+    margin: 20px;
+}
+
+.card-button {
+    height: 15vh;
+    font-size: 3em;
+    text-decoration: none;
+    color: var(--background-color);
+    border-radius: 10px;
+    transition: all .4s;
+}
+.card-button:hover {
+    transform: scale(1.1);
+    color: var(--headline-color-on-color);
+}
+
+.card-button h2{
+    border-radius: 10px;
+    padding: 0 20px;
+    margin: 5% 0;
+}
+
+#home-card-grid a:nth-of-type(1) {
+    background-image: var(--main-gradient);
+
+}
+#home-card-grid a:nth-of-type(2) {
+    background-image: var(--accent-gradient);
+}
+
+#home-card-grid p {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+#home-contact-grid {
+    display: grid;
+    grid-template: 2fr 1fr 10fr 1fr 2fr / repeat(11, 1fr);
+    background-color: var(--background-color);
+    height: 75vh;
+}
+.home-contact-background {
+    background-image: var(--main-gradient);
+    grid-area: 1 / 1 / 6 / 12;
+}
+.home-contact-img {
+    height: 100%;
+    grid-area: 2 / 2 / 5 / 7;
+    border-radius: 5px solid var(--accent2-color);
+    box-shadow: 5px 5px 10px var(--background-color);
+}
+.home-contact-text {
+    grid-area: 3 / 6 / 4 / 11;
+    background-image: var(--accent-gradient);
+    border-radius: 10px;
+    padding: 1em 2em;
+    font-size: 1.5em;
+    box-shadow: 5px 5px 10px var(--background-color);
+}
+.home-contact-text p {
+    text-indent: 20px;
+}
+
+.footer-space {
+    height: 25vh;
+}
+
+footer {
+    background-image: var(--full-gradient);
+    max-height: 100px;
+    padding: 50px;
+
+}
+
+footer * {
+    display: inline;
+    padding: 15px;
+    font-size: 1.5em;
+
+    color: var(--headline-color-on-color)
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+     /*   https://www.dotlogics.com/  */
+
+
+     @keyframes arrow {
+        0% {
+            
+        }
+        80% {
+            transform:
+                translate3d(0px, -16px, 0px)
+    
+        }
+        100% {
+            transform:
+                translate3d(0px, 0px, 0px)
+        }
+    }
+
+     @keyframes card {
+        0% {
+            transform:
+                rotateX(51deg)
+                rotateZ(43deg);
+            border-radius: 32px;
+            box-shadow:
+                1px 1px 0 1px #f9f9fb,
+                -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+                28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+        }
+        50% {
+            transform:
+                translate3d(0px, -16px, 0px)
+                rotateX(51deg)
+                rotateZ(43deg);
+            box-shadow:
+                1px 1px 0 1px #f9f9fb,
+                -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+                54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+        }
+        100% {
+            transform:
+                rotateX(51deg)
+                rotateZ(43deg);
+            border-radius: 32px;
+            box-shadow:
+                1px 1px 0 1px #f9f9fb,
+                -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+                28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+        }
+    }
