@@ -84,7 +84,6 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
 }
 .home-big-logo {
     width: 35vw;
-    
     transform: perspective(1500px) rotateY(15deg);
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -93,7 +92,6 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
 .home-big-logo:hover {
     transform: perspective(3000px) rotateY(5deg);
 }
-
 .home-intro-title {
     font-size: 3.5em;
     background-image: var(--full-gradient);
@@ -259,6 +257,57 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
     text-indent: 20px;
 }
 
+/*              EDUCATION PAGE               */
+
+.education-title {
+    background-image: var(--main-gradient);
+    color: var(--background-color);
+    margin: 0 0 2em;
+    font-size: 3.5em;
+    padding-left: 20%;
+}
+.education-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    margin-bottom: 100px; 
+}
+.education-grid > * {
+    width: 85%;
+}
+.education-grid div h2 {
+    font-size: 2.5em;
+    text-align: center;
+    background-image: var(--main-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.education-grid div h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+.education-grid p {
+    text-indent: 2em;
+    font-size: 1.5em;
+}
+.education-byui-img, .education-byui-text {
+    margin: 5em 0;
+}
+.subpage-button {
+    grid-column: 1 / 3;
+}
+.link-to-experiences {
+    background-image: var(--accent-gradient);
+    width: max-content;
+
+}
+
+
+
+
+/*              FOOTER              */
+
 .footer-space {
     height: 25vh;
 }
@@ -268,19 +317,16 @@ footer {
     max-height: 100px;
     padding: 50px;
 }
-
 footer * {
     display: inline;
     padding: 15px;
     font-size: 1.5em;
     color: var(--headline-color-on-color)
 }
-
 footer a {
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
-
 footer a:hover {
     text-decoration: underline;
 }
