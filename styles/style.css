@@ -20,8 +20,8 @@ https://www.10bestdesign.com/firms/ecommerce/?gad=1&gclid=CjwKCAjwyeujBhA5EiwA5W
   --paragraph-color-on-color: white;
   --background-color: #1b1d1e;
   --main-gradient: linear-gradient(135deg, #F72585 20%,#7209B7 80%, #3A0CA3 99%);
-  --accent-gradient: linear-gradient(135deg, #4361EE, #4CC9F0);
-  --full-gradient: linear-gradient(135deg, #F72585 20%,#7209B7 65%, #4361EE 80%, #4CC9F0 99%);
+  --accent-gradient: linear-gradient(135deg, #4CC9F0, #4361EE);
+  --full-gradient: linear-gradient(135deg, #F72585 20%,#7209B7 50%, #4361EE 70%, #4CC9F0 99%);
   --paragraph-background-color: #4361ee  ;
   --nav-background-color: linear-gradient(135deg, #F72585 20%,#7209B7 80%, #3A0CA3 99%);
   --nav-hover-link-color: white;
@@ -270,6 +270,7 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
+    align-items: center;
     margin-bottom: 100px; 
 }
 .education-grid > * {
@@ -291,6 +292,10 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
     text-indent: 2em;
     font-size: 1.5em;
 }
+.education-grid img {
+    padding: 10px;
+    background-image: var(--main-gradient);
+}
 .education-byui-img, .education-byui-text {
     margin: 5em 0;
 }
@@ -300,9 +305,55 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
 .link-to-experiences {
     background-image: var(--accent-gradient);
     width: max-content;
-
 }
 
+
+/*              EXPERIENCES             */
+.experiences-title {
+    background-image: var(--accent-gradient);
+    color: var(--background-color);
+    margin: 0 0 2em;
+    font-size: 3.5em;
+    padding-left: 20%;
+}
+.experiences-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 100px; 
+
+}
+.experiences-grid > * {
+    width: 85%;
+}
+.experiences-grid div h2 {
+    font-size: 2.5em;
+    text-align: center;
+    background-image: var(--accent-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.experiences-grid div h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+.experiences-grid p {
+    text-indent: 2em;
+    font-size: 1.5em;
+}
+.experiences-grid img {
+    padding: 10px;
+    background-image: var(--accent-gradient);
+}
+.experiences-ms-img, .experiences-ms-text {
+    margin: 5em 0;
+}
+.link-to-education {
+    background-image: var(--main-gradient);
+    width: max-content;
+}
 
 
 
