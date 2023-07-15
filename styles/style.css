@@ -204,6 +204,9 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
     color: var(--background-color);
     border-radius: 10px;
     transition: all .4s;
+    width: max-content !important;
+    height: max-content;
+    margin: 1em 0;
 }
 .card-button:hover {
     transform: scale(1.1);
@@ -213,7 +216,8 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
 .card-button h2{
     border-radius: 10px;
     padding: 0 20px;
-    margin: 5% 0;
+    margin: 0;
+    width: max-content !important;
 }
 
 #home-card-grid a:nth-of-type(1) {
@@ -305,6 +309,7 @@ nav a:nth-of-type(4) {grid-column: 5 / 6}
 .link-to-experiences {
     background-image: var(--accent-gradient);
     width: max-content;
+    margin: 0;
 }
 
 
